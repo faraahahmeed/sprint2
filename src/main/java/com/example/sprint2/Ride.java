@@ -14,6 +14,7 @@ public class Ride
     private Offer offer;
     private Driver driver;
     float cost;
+    LocationService locationService = new LocationService();
     Passenger p = new Passenger();
     Notification notification=new Notification();
     Ride ridee;
@@ -26,6 +27,7 @@ public class Ride
         this.Destination=Destination;
         cost=offer.getPrice();
         notification.sendnotifywhenuseracceptoffer(ridee);
+        locationService. trackcalls();
 
     }
     public void setId(int id) {
