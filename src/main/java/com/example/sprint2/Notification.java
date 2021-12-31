@@ -1,3 +1,5 @@
+package com.example.sprint2;
+
 public class Notification {
     public void sendnotify(Ride ride){
         for(int i=0; i < DriverData.getinstance().getdrivers().size();i++){

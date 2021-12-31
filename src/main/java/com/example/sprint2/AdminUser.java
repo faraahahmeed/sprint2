@@ -1,3 +1,5 @@
+package com.example.sprint2;
+
 import java.util.ArrayList;
 import java.util.function.DoubleToIntFunction;
 

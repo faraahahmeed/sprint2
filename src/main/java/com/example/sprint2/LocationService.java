@@ -1,3 +1,5 @@
+package com.example.sprint2;
+
 public class LocationService {
         static int counter = 0;
         APIManager api;

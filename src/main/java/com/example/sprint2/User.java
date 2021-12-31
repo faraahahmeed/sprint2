@@ -1,3 +1,5 @@
+package com.example.sprint2;
+
 import java.util.ArrayList;
 import java.util.UUID;
 import java.util.Scanner;
@@ -30,7 +32,7 @@ public class User
 
     public void ViewHistory(){
         Ride ride = new Ride();
-       System.out.println(ride.getRideHistory(ride));
+       ride.RideHistory(ride);
     }
      public void signup() {
          System.out.println("Enter Username, Email ,Password and Mobile Number");

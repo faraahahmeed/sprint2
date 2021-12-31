@@ -1,12 +1,10 @@
-package com.example.demo;
+package com.example.sprint2;
 
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.demo.Core.Person;
-import com.example.demo.application.IPeopleService;
-import com.example.demo.application.PeopleService;
+
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,31 +16,31 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpClientErrorException.NotFound;
 
 @RestController
-public class DummyController {
-    List<Person> list = new ArrayList<Person>();
-
-    @PostMapping("/dummy/add")
-    public Boolean add(@RequestBody Person p) {
-        return list.add(p);
+public class DriverController {
+    //List<Person> list = new ArrayList<Person>();
+    DriverData data = new DriverData();
+    @PostMapping("/driver/add")
+    public Boolean add(@RequestBody Driver d) {
+        return data.adddriver(d);
     }
 
-    @GetMapping("/dummy/{name}")
-    public Person get(String name) {
-        for (Person person : list) {
-            if (person.getName().equals(name)) {
+    /*@GetMapping("/driver/{name}")
+    public Driver get(String name) {
+        for (Driver driver : list) {
+            if (driver.getName().equals(name)) {
                 return person;
             }
         }
 
         return null;
+    }*/
+
+    @GetMapping("/driver")
+    public List<Driver> getAll() {
+        return data.getdrivers();
     }
 
-    @GetMapping("/dummy")
-    public List<Person> getAll() {
-        return list;
-    }
-
-    @DeleteMapping("/dummy/{name}/delete")
+    /*@DeleteMapping("/driver/{name}/delete")
     public boolean delete(@PathVariable String name) {
         for (Person person : list) {
             if (person.getName().equals(name)) {
@@ -51,5 +49,5 @@ public class DummyController {
         }
 
         return false;
-    }
+    }*/
 }

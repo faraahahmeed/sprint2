@@ -1,15 +1,10 @@
-package com.example.demo;
+package com.example.sprint2;
 
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.demo.Core.Person;
-import com.example.demo.Core.Ride;
-import com.example.demo.application.IPeopleService;
-import com.example.demo.application.IRidesService;
-import com.example.demo.application.PeopleService;
-import com.example.demo.application.RidesService;
+import com.example.sprint2.Ride;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,25 +17,26 @@ import org.springframework.web.client.HttpClientErrorException.NotFound;
 
 @RestController
 public class RideController {
-    private IRidesService service = new RidesService();
+    //private IRidesService service = new RidesService();
+    Ride data = new Ride();
 
     @PostMapping("/rides/add")
     public Boolean add(@RequestBody Ride ride) {
-        return service.add(ride);
+        return data.save(ride);
     }
 
     @GetMapping("/rides")
     public List<Ride> getAll() {
-        return service.getAll();
+        return data.getRides();
     }
 
     @GetMapping("/rides/{id}")
     public Ride get(@PathVariable int id) {
-        return service.get(id);
+        return data.get(id);
     }
 
-    @DeleteMapping("/rides/{id}/delete")
+    /*@DeleteMapping("/rides/{id}/delete")
     public boolean delete(@PathVariable int id) {
         return service.delete(id);
-    }
+    }*/
 }

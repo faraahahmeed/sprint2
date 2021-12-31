@@ -1,3 +1,4 @@
+package com.example.sprint2;
 
 import java.util.ArrayList;
 import java.util.*;
@@ -33,9 +34,11 @@ public class Ride
     public Ride get(int id) {
         return list.get(id);
     }
-    public void save(Ride ride) {
+    public List<Ride> getRides(){return list;}
+    public boolean save(Ride ride) {
         ride.setId(getNumberOfRide());
         list.add(ride);
+        return true;
     }
 
     public int getNumberOfRide(){

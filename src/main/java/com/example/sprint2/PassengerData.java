@@ -1,22 +1,24 @@
+package com.example.sprint2;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PassangerData  {
+public class PassengerData  {
 
-    private static PassangerData database ;
+    private static PassengerData database ;
     public ArrayList <Passenger> passengerdb = new ArrayList<>();
-    private PassangerData(){}
+    public PassengerData(){}
 
-    public static PassangerData getinstance(){
+    public static PassengerData getinstance(){
         if(database==null){
-            database=new PassangerData();
+            database=new PassengerData();
         }
         return database;
     }
 
-    public void addPassenger(Passenger p){
+    public boolean addPassenger(Passenger p){
         passengerdb.add(p);
+        return true;
     }
 
     public ArrayList <Passenger> getPassengers(){

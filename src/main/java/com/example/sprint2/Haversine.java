@@ -1,3 +1,5 @@
+package com.example.sprint2;
+
 import java.util.Random;
 
 public class Haversine  implements APIManager {
