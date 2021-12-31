@@ -1,4 +1,4 @@
-package com.example.sprint2;
+package com.example.sprint2.Application_Logic.Trip_System;
 
 import java.util.ArrayList;
 import java.util.List;

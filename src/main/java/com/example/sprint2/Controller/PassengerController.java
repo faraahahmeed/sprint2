@@ -1,21 +1,20 @@
-package com.example.sprint2;
+package com.example.sprint2.Controller;
 
 import java.util.List;
 
 
-
-import org.springframework.web.bind.annotation.DeleteMapping;
+import com.example.sprint2.Storage.PassengerData;
+import com.example.sprint2.Application_Logic.Trip_System.Passenger;
+import com.example.sprint2.Application_Logic.Trip_System.User;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class PassengerController {
 
-
+User user = new Passenger();
     /*public PeopleController() {
         peopleService = new PeopleService();
     }*/
@@ -32,6 +31,7 @@ public class PassengerController {
 
     @PostMapping("/passenger/add")
     public boolean add(@RequestBody Passenger p) {
+        user.signup(p);
         return data.addPassenger(p);
     }
 

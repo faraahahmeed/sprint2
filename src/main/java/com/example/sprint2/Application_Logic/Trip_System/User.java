@@ -1,7 +1,9 @@
-package com.example.sprint2;
+package com.example.sprint2.Application_Logic.Trip_System;
 
-import java.util.ArrayList;
-import java.util.UUID;
+import com.example.sprint2.Application_Logic.Trip_System.Driver;
+import com.example.sprint2.Application_Logic.Trip_System.Passenger;
+import com.example.sprint2.Application_Logic.Trip_System.Ride;
+
 import java.util.Scanner;
 public class User
 {
@@ -34,15 +36,24 @@ public class User
         Ride ride = new Ride();
        ride.RideHistory(ride);
     }
-     public void signup() {
+     public void signup(Driver driver) {
          System.out.println("Enter Username, Email ,Password and Mobile Number");
          String username = input.next();
-         String password = input.next();
          String email = input.next();
+         String password = input.next();
          String mobilenum = input.next();
-
-
+         System.out.println("Enter License and National ID ");
+         String licence = input.next();
+         String nationalId = input.next();
      }
+
+    public void signup(Passenger p) {
+        System.out.println("Enter Username, Email ,Password and Mobile Number");
+        String username = input.next();
+        String email = input.next();
+        String password = input.next();
+        String mobilenum = input.next();
+    }
 
     public  void logIn(Driver driver){
         System.out.println("Enter Username");

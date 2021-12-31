@@ -1,4 +1,8 @@
-package com.example.sprint2;
+package com.example.sprint2.ETA;
+
+import com.example.sprint2.ETA.APIManager;
+import com.example.sprint2.ETA.GoogleMapsAPI;
+import com.example.sprint2.ETA.Haversine;
 
 public class LocationService {
         static int counter = 0;

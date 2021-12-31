@@ -1,4 +1,6 @@
-package com.example.sprint2;
+package com.example.sprint2.ETA;
+
+import com.example.sprint2.ETA.APIManager;
 
 import java.util.Random;
 

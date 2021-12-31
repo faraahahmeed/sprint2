@@ -1,7 +1,8 @@
-package com.example.sprint2;
+package com.example.sprint2.Application_Logic.Server_System;
+
+import com.example.sprint2.Application_Logic.Trip_System.Driver;
 
 import java.util.ArrayList;
-import java.util.function.DoubleToIntFunction;
 
 public class AdminUser {
     private Driver driver;
@@ -9,8 +10,8 @@ public class AdminUser {
     boolean output ;
     ArrayList<Driver> pending=new ArrayList<>();
     public boolean VerifyRegistrations(Driver driver) {
-        for (int i = 0; i < driver.pending.size(); i++) {
-            if (driver.pending.get(i).getDrivinglicense() == null
+        for (int i = 0; i < pending.size(); i++) {
+            if (pending.get(i).getDrivinglicense() == null
                     || driver.getNationalid().length() < 14)
             {output=false;
             System.out.println("Your account is Verfied and you can logIn now!...");}
@@ -19,6 +20,9 @@ public class AdminUser {
 
         }
         return output;
+    }
+    public void addpending(Driver d){
+        pending.add(d);
     }
     /*public void ListRegistrations(Driver driver)
         {

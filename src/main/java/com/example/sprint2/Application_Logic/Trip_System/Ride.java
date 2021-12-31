@@ -1,4 +1,7 @@
-package com.example.sprint2;
+package com.example.sprint2.Application_Logic.Trip_System;
+
+import com.example.sprint2.Application_Logic.Server_System.Notification;
+import com.example.sprint2.ETA.LocationService;
 
 import java.util.ArrayList;
 import java.util.*;
