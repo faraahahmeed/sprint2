@@ -27,7 +27,7 @@ public class Ride
         this.Destination=Destination;
         cost=offer.getPrice();
         notification.sendnotifywhenuseracceptoffer(ridee);
-        locationService. trackcalls();
+        locationService.trackcalls();
 
     }
     public void setId(int id) {
